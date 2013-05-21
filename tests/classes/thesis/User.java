@@ -10,17 +10,19 @@ import java.sql.Timestamp;
 
 public class User {
     final private static java.lang.String _sjprotocol_p_uv =
-      ("H4sIAAAAAAAAAIWSv2/TQBTHX5yGplCphaoViCIm1AFkb1060FQiatIrqTDM" +
-       "4XI52Y6u5+PuUVyp\nYm7/EhZ2RoTY2GBkhYGF/4CB+xECRJVsybbO3/d9n/" +
-       "d98tuf0DIaHphJjKeKG/8sRxPO0MSGGxO+\npv09nhXyqT0MGYSrEQFUGrZq" +
-       "rfOuiECL5YUYI2wRM0l8XfKPO5m5k+DeIXBFUc0lvoDXEFnquirF\naSZKnL" +
-       "IDo3Pv3TPy4/3dMNntS2oGnjBkv7Y373zpfF9qQoNAW5WmwKKUCDfJH1PyEg" +
-       "uRHE2VnUqp\nyi7qfm3alMvxfGLLuHZsa2jGnYSw/hcTcvqUlUvX8JykltOT" +
-       "I00lyy9htRi1lQhrZEJPaAiyT01+\nSNWMoZSlXHd67PR4qrcWv374uPH8cx" +
-       "OiLlwVJR13KcNS92AJc81NXopxpR7uetryq7Z9rto7ss1W\n7Mi+VdondMTF" +
-       "fyM1BR0h3AgDCSqzJEVdyMzuFSEaHFh/XBv5CWe8OOE123UB27NVuvfaNO7m" +
-       "3A9x\nJCjj+zYR10P25tuns0cHF+e+34Kkx77RqpsvrMlNHfck8oxrJy373h" +
-       "s2FebcFCbup4PHh2EOL60g\nLHQ7PWLp7nhL/QaQE/LkbQMAAA==");
+      ("H4sIAAAAAAAAAIVTMW/TQBR+sRtIIVJLShESJagCVFVF9gRLBxqkRk3ikiqG" +
+       "OZwvp/iCcz581+JK\nqDOM/AIWJJZuDIwIwcQGE2JgKUIs/AMGzndpoFZELP" +
+       "ms83vf+973vbvDX1AUCdwQA0fucyL0GgcD\ngqVwBBHC/PWbd0ifsntq08Vg" +
+       "noIFkCawMhWaR1keFHFIo56EFU8MXJ3n/oN2x2jXoNc9OMVRQph8\nBAdgKd" +
+       "ZFHkf7/SiWI27DUbv+5r738+0V09mlCTltzdDFv28tXf5c+z5rQ8GDEo8FlT" +
+       "RmEi56xyB3\nV9LI3RlF1lPOU2XU2lS1PmG9vGLFcXaoclCfZCEJi39pjE6t" +
+       "Ms3UFTSPO5WnwYIEMRxO4CpipDIl\nLHgDtIeMkC0kwm3ExxycK5ZzWdzJ4s" +
+       "4oXjz99d37Cw8+2WDV4UwUo14dYRknDZiVYUJEGEe9lN/e\n0GzlxyW1zqvX" +
+       "UsXmVMu6lN/0UECiEy3ZEQokVExDEWJ915cJZX3lqwSr3VJ4Z6rkDsGE7pEp" +
+       "7mYC\nS2Mrs+/CSG41dyB2EjpU0z2u+Lz68sfro855XXHmIWXqgF7ND+oE5l" +
+       "pLJRlLbT225f8x6OwPa8uH\nB51vgTmilXG+dm6T7Q5vvvhCVjfK2HTB0FAL" +
+       "ms98sqm5AGXFtJRnihAmW2o6JOniV0cfn2y2nj2d\nUKMiQyKocJp+++62MU" +
+       "17NCdhpl5reMqqbFvlfwAZj5LPGgQAAA==");
     
     public static void main(String[] argv) {
         try {
@@ -67,8 +69,8 @@ public class User {
                                                         msg.get(
                                                           "message"));
                                                       int status =
-                                                        (Integer)
-                                                          s_uv.receive();
+                                                        s_uv.
+                                                          receiveInt();
                                                       print("Status: " +
                                                             status);
                                                   } else {
@@ -86,7 +88,7 @@ public class User {
     }
     
     final public static String jlc$CompilerVersion$jl = "2.2.3";
-    final public static long jlc$SourceLastModified$jl = 1369120728000L;
+    final public static long jlc$SourceLastModified$jl = 1369131612000L;
     final public static String jlc$ClassType$jl =
       ("H4sIAAAAAAAAAIVXW2xURRiePdvusu1iuy2tTSltKUVBwi7xQtS+WBsqhSVd" +
        "24KyhiyzZ2e3p5wb\nZ+Zst1WJxkSQBxOD10ThxYTE8GAg6oNGTcC7JqYP4A" +

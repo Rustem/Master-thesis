@@ -32,7 +32,7 @@ public class User
       begin.
       !<JSONMessage>.
       ?{
-        OK: ?(JSONMessage).?(Integer),
+        OK: ?(JSONMessage).?(int),
         FAIL: 
       }
   }
@@ -64,7 +64,7 @@ public class User
           case OK: {
             msg = ((JSONMessage) s_uv.receive()).parse();
             print("Status: " + msg.get("message"));
-            int status = s_uv.receive();
+            int status = s_uv.receiveInt();
             print("Status: " + status);
           }
           case FAIL: {

@@ -4,7 +4,7 @@ import java.util.*;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.*;
 
-class JSONMessage implements Serializable {
+public class JSONMessage implements Serializable {
     private String msg;
 
     JSONMessage(String msg) {
@@ -21,6 +21,7 @@ class JSONMessage implements Serializable {
         return JSON.parse(this.msg);
     }
 }
+
 
 class JSON {
     static JSONParser parser = new JSONParser();
