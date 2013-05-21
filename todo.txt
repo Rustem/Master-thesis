@@ -1,0 +1,17 @@
+This software is in current development. The following features are experimental/incomplete:
+
+- Compilation error feedback may sometimes print stack traces (please just scroll up past the stack trace to the error(s) reported before the exception was raised).
+
+- Separate (i.e. separate files) compilation of SJ classes is not yet supported.
+
+- Receive cast insertion is supported only for variable initialisation and assignment. It is not yet supported for nested session operations e.g. myMeth(s.receive()).
+
+- Session entity fields (protocols, server-addresses, etc.) and session methods are currently restricted to private access.
+
+- Session type checking covers the use of standard if-statements and while-loops, but has not yet been extended to for-loops, do-while, switch, etc. (These can be used, but type safety is not checked.)
+
+- Session-recursion and session-threads are still experimental.
+
+- There is no runtime check against the delegation of a session endpoint to the owner of the corresponding endpoint in the current version of the runtime (will result in deadlock).
+
+- There is no explicit check at session initiation for compatible socket implementations at each peer: such situations will generally result in implicit errors, e.g. if an SJFSocket tries to connect to a SJRServerSocket. (Session initiation between compatible implementations IS working, including session duality check.)

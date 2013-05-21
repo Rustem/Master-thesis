@@ -1,0 +1,28 @@
+SessionJ copyright (C) 2008 Raymond Hu, Imperial College London
+
+http://www.doc.ic.ac.uk/~rh105/sessionj.html
+
+2008-07-17
+
+--------
+
+This software is in current development. 
+
+Note: the `sjc' (compiler) and `sj' (runtime) scripts require `java' and `javac' to be available on the path.  
+
+Please see `todo.txt' for a list of experimental/incomplete features.
+
+Further information and documentation are available from the project homepage at the above URL.
+
+Some example programs are included under `sj/tests/src'.
+
+--------
+
+This software was designed by
+
+  Raymond Hu (Imperial College London)
+  Nobuko Yoshida (Imperial College London)
+  Kohei Honda (Queen Mary, University of London) 
+   
+Acknowledgements to Fred Van Den Driessche for contributions to the implementation, and Andi Bejleri for bug finding and comments.
+  

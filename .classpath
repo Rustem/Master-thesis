@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="compiler/src"/>
+	<classpathentry kind="src" path="runtime/src"/>
+	<classpathentry kind="lib" path="lib/java_cup.jar"/>
+	<classpathentry kind="lib" path="lib/JFlex.jar"/>
+	<classpathentry kind="lib" path="lib/ppg.jar"/>
+	<classpathentry kind="lib" path="lib/sj-rt.jar"/>
+	<classpathentry kind="lib" path="lib/sj.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/polyglot-2.2.3/lib/polyglot.jar"/>
+	<classpathentry kind="lib" path="/home/rustem/work/diploma/project benchmarking/sj/plugins/json-simple-1.1.1.jar"/>
+	<classpathentry kind="output" path="tests/src/benchmarks/micro/tmp"/>
+</classpath>

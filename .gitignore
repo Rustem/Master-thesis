@@ -1,0 +1,8 @@
+/compiler/
+/lib/
+/runtime/
+/bin/pth
+/tests/classes/*/
+/tests/src/*/
+!/tests/classes/thesis/
+!/tests/src/thesis/
