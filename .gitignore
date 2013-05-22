@@ -1,3 +1,4 @@
+*.class
 /compiler/
 /lib/
 /runtime/
