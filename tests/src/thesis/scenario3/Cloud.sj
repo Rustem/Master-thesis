@@ -13,7 +13,7 @@ import java.util.*;
 import java.net.UnknownHostException;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.*;
-
+import java.io.*;
 
 
 public class Cloud {
@@ -22,7 +22,7 @@ public class Cloud {
   private Map database = new LinkedHashMap();
   public static void main(String []argv) {
     try {
-      new Cloud(Integer.parseInt(argv[0]), argv[1], Integer.parseInt(argv[2]));  
+      new Cloud(Integer.parseInt(argv[0]));  
     } catch(IOException ioe) {
       ioe.printStackTrace();
     }
@@ -31,9 +31,9 @@ public class Cloud {
 
   private protocol p_payment {
       !<Goods>.?{
-          VISA_MASTER: ?<CardDetails>,
-          TRANSFER: ?<TransferDetails>
-      }.?{
+          VISA_MASTER: ?(CardDetails),
+          TRANSFER: ?(TransferDetails)
+      }.!{
           PAID: !<String>,
           DECLINED: !<String>,
           FAILED: !<String>
@@ -41,7 +41,7 @@ public class Cloud {
   }
 
   private protocol p_wallet {
-      ?<Integer>.?<Integer>.!{
+      ?(Integer).?(Integer).!{
           PAYMENT_INACTIVE: !<OSMPMessage>,
           USER_NOT_FOUND: !<OSMPMessage>,
           OK: !<OSMPMessage>
@@ -49,22 +49,22 @@ public class Cloud {
   }
 
   private protocol p_vp {
-      begin.!< @p_payment >
+      begin.!<String>.!< @p_payment >
   }
 
   private protocol p_vw {
-      begin.!< @p_wallet >
+      begin.!<String>.!< @p_wallet >
   }
 
   private protocol p_vu {
     begin.
     ![
       ?(String).?(String)     // login password
-    ]*.
-      ?{
-        PAYMENT: @p_vpayment,
-        WALLET: @p_vwallet
+    ]*.!{
+        ACCESS: ?{ PAYMENT: @p_payment, WALLET: @p_wallet},
+        DENY: !<String>
       }
+      
   }
   
   private void print(String s) {
@@ -82,20 +82,20 @@ public class Cloud {
   }
   Scanner sc = new Scanner(new InputStreamReader(System.in));
   private String payment_hostName;
-  private String payment_port;
-  private String wallet_hostname;
-  private String wallet_port;
+  private int payment_port;
+  private String wallet_hostName;
+  private int wallet_port;
 
   private void set_backends_address() {
       System.out.println("Enter payment hostname and port. For ex.: localhost:8000");
       String [] address = sc.nextLine().split(":");
       this.payment_hostName = address[0];
-      this.payment_port = address[1];
+      this.payment_port = Integer.parseInt(address[1]);
 
       System.out.println("Enter wallet hostname and port. For ex.: localhost:8001");
       address = sc.nextLine().split(":");
       this.wallet_hostName = address[0];
-      this.wallet_port = address[1];
+      this.wallet_port = Integer.parseInt(address[1]);
   }
 
   public Cloud(int portN) throws IOException {
@@ -110,8 +110,8 @@ public class Cloud {
       boolean exit = false;
       int counter = 0, max_atempts = 5;
       user_vu.outwhile(!exit) {
-          String login = cur_user = user_vu.receive();
-          String password = user_vu.receive();
+          String login = cur_user = (String) user_vu.receive();
+          String password = (String) user_vu.receive();
           counter ++;
           if(this.is_authenticated(login, password) || (counter >= max_atempts)) {
               exit = true;
@@ -119,28 +119,30 @@ public class Cloud {
       }
       if(counter < max_atempts) {
           user_vu.outbranch(ACCESS) {
-              print(String.format("User[%s] is allowed to proceed.", cur_user))
-              s_uv.inbranch() {
+              print("User is allowed to proceed.");
+              user_vu.inbranch() {
                   case PAYMENT: {
-                      print(String.format("User[%s] chosen PAYMENT op.", cur_user))
-                      SJServerAddress addr_vp = new SJServerAddress.create(
+                      print("User chosen PAYMENT op.");
+                      SJServerAddress addr_vp = SJServerAddress.create(
                           p_vp, this.payment_hostName, this.payment_port);
                       SJSocket s_vp = SJRSocket.create(addr_vp);
                       try(s_vp) {
                           s_vp.request();
-                          s_vp.send(s_uv);
+                          s_vp.send(cur_user);
+                          s_vp.send(user_vu);
                       } catch(UnknownHostException uhe) {
                           uhe.printStackTrace();
                       }
                   }
                   case WALLET: {
-                      print(String.format("User[%s] chosen WALLET op.", cur_user))
-                      SJServerAddress addr_vw = new SJServerAddress.create(
+                      print("User chosen WALLET op.");
+                      SJServerAddress addr_vw = SJServerAddress.create(
                           p_vw, this.wallet_hostName, this.wallet_port);
-                      SJSocket s_vw = new SJRSocket.create(addr_vw);
+                      SJSocket s_vw = SJRSocket.create(addr_vw);
                       try(s_vw) {
                           s_vw.request();
-                          s_vw.send(s_uv);
+                          s_vw.send(cur_user);
+                          s_vw.send(user_vu);
                       } catch(UnknownHostException uhe) {
                           uhe.printStackTrace();
                       }
@@ -149,7 +151,7 @@ public class Cloud {
           }
       } else {
           user_vu.outbranch(DENY) {
-              print(String.format("User[%s] is canceled to proceed.", cur_user))
+              print("User is canceled to proceed.");
               user_vu.send("You have no permissions. BYE!");
           }
       }

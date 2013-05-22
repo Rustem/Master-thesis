@@ -28,28 +28,29 @@ public class User
     
   */
   private static protocol payment {
-      ?<Goods>.!{
+      ?(Goods).!{
           VISA_MASTER: !<CardDetails>,
           TRANSFER: !<TransferDetails>
       }.?{
-          PAID: <String>,
-          DECLINED: <String>,
-          FAILED: <String>
+          PAID: ?(String),
+          DECLINED: ?(String),
+          FAILED: ?(String)
       }
   }
 
   private static protocol wallet {
       !<Integer>.!<Integer>.?{
-          PAYMENT_INACTIVE: ?<OSMPMessage>,
-          USER_NOT_FOUND: ?<OSMPMessage>,
-          OK: ?<OSMPMessage>
+          PAYMENT_INACTIVE: ?(OSMPMessage),
+          USER_NOT_FOUND: ?(OSMPMessage),
+          OK: ?(OSMPMessage)
       }
   }
   private static protocol p_uv {
       begin.?[
         !<String>.!<String>
       ]*.?{
-            ACCESS: !{ PAYMENT: @payment, WALLET:  @wallet },
+            ACCESS: !{ 
+                PAYMENT: @payment, WALLET:  @wallet },
             DENY: ?(String)
           }
   }
@@ -108,32 +109,30 @@ public class User
                         } else {
                             s_uv.outbranch(TRANSFER) {
                                 TransferDetails t = new TransferDetails(
-                                    new String(
-                                        "Казахстан, 050000, г. Алматы, ул. Толе би, 113/55, (уг. ул. Панфилова), 3 этаж, офис № 6, ТОО \"Alma Cloud\".",
-                                        "UTF-8");
+                                    "Kazakhstan, 050000, c. Almaty, str. Zharokov, 167/65");
                                 s_uv.send(t);
                             }
                         }
-                    }
-                    s_uv.inbranch() {
                         String msg = "";
-                        case PAID: {
-                            msg = s_uv.receive();
+                        s_uv.inbranch() {
+                            case PAID: {
+                                msg = s_uv.receive();
+                            }
+                            case DECLINED: {
+                                msg = s_uv.receive();
+                            }
+                            case FAILED: {
+                                msg = s_uv.receive();
+                            }
+                            print("PAYMENT STATUS: " + msg);
                         }
-                        case DECLINED: {
-                            msg = s_uv.receive();
-                        }
-                        case FAILED: {
-                            msg = s_uv.receive();
-                        }
-                        print(String.format("PAYMENT STATUS: %s", msg))
                     }
                 } else {
                     s_uv.outbranch(WALLET) {
-                        s_uv.send(this.txn_number);
-                        s_uv.send(this.walletNumber);
+                        s_uv.send(new Integer(this.txn_number));
+                        s_uv.send(new Integer(this.walletNumber));
+                        OSMPMessage msg = null;
                         s_uv.inbranch() {
-                            OSMPMessage msg = null;
                             case OK: {
                                 msg = (OSMPMessage) s_uv.receive();
                             }
@@ -143,7 +142,7 @@ public class User
                             case USER_NOT_FOUND: {
                                 msg = (OSMPMessage) s_uv.receive();
                             }
-                            print(String.format("WALLET RECHARGE STATUS: %s", msg.comment));
+                            print("WALLET RECHARGE STATUS: " + msg.comment);
                         }
                     }
                 }      

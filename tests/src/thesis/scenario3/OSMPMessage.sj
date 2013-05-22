@@ -1,6 +1,7 @@
+package thesis.scenario3;
+
 import java.util.*;
 
-package thesis.scenario3;
 
 import java.io.Serializable;
 

@@ -13,10 +13,11 @@ public class Good implements Serializable {
     public Good(String productName, int productPrice, int period) {
         this.productName = productName;
         this.productPrice = productPrice;
-        this._setDates();
+        this._setDates(period);
     }
     private void _setDates(int period) {
-        Calendar future = Calendar.getInstance().add(Calendar.MONTH, period);
+        Calendar future = Calendar.getInstance();
+        future.add(Calendar.MONTH, period);
         this.fromDate = new Date();
         this.toDate = future.getTime();
     }
