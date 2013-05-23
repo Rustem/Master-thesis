@@ -12,6 +12,20 @@ import java.io.*;
 public class User
 {
     final private static java.lang.String
+      _sjprotocol_wallet =
+      ("H4sIAAAAAAAAAIVSQW/TMBR+TShsDG1jUIREJ05oB6TkMIlLD6yCVuuWNtXS" +
+       "InEKrmslqTzHs83I\nJMQZfgkX7hwR4sYNjlzhwIV/wAHbSQdMlRopz9Z73/" +
+       "u+99l+9wvqUsB9OfPUGSfSxnwyI1hJTxIp\ny2x0EBE2Hel9jKH8ag7UAlg7" +
+       "1hiUEFNS0Ah4Ts8Smivf9vkm3SoE7Czlv8jtBFDHaUanCnYCOav4\n/un2z7" +
+       "v9srsVwGWOBGHqBF6Bq1Ub82kq7VKjfe/9OPj54a4DoDF3FmBCqxDj3w+a21" +
+       "/bP1Zd43SF\n5zJTWc4U3P5r87nKqD+sKq2C80IaddCrAH+p6x6bCMRwuuBk" +
+       "6xhppIIbwQydolJoH8m0j3irMBoO\n13Ja5bqpe6buVfX6lW8fP9169sUFpw" +
+       "tXaY6mXYRVLnqwqlJBZJrTacEf7lm1ay9WdNzUv6vJNvTI\nlio6CNCE0P9G" +
+       "cimaKNgqB6KIJX6kRMYS7VvB+jjqHMWDcBR3w/Hgsebylto/Iphkp2TJuzJm" +
+       "a+eW\nzbqm2ZsXLm5IESb72hkRMX77/fPLzuGb15brEkPHlmTDzNlUKZGZng" +
+       "MThkSW73ph1B/2Szl7eesK\nnPDQbrfmgiY05tXNYftpvzMYxb1B+9Go96Sz" +
+       "AFtwm7ypqvsxx+X1mCIJERa2/QfznlhUewMAAA==");
+    final private static java.lang.String
       _sjprotocol_p_uv =
       ("H4sIAAAAAAAAAI1Tv2/TQBS+JE2aNlV/qqWiRdABdaCykZBYMlCTONSt40Sx" +
        "26qTudhH4si1je/a\nJhJihr+EhZ0RITY2GFlhYOE/YODubKdN6iqNknfxvf" +
@@ -45,20 +59,6 @@ public class User
        "rHnTmVGhrTmNWu7bhLI9JE\nL15a6N2Y8Qd9+9jrdvqy+DuF1+WR2C/4wxS3" +
        "NLswNa9r1zUBOyIgPJRETGLEQnrPHMjL588IaxOB\nwohPi9p44nj28Mj2Br" +
        "IutbYzj2ouoPYR83NM3rUM214Ie0ipz/8AUQ1rzFUEAAA=");
-    final private static java.lang.String
-      _sjprotocol_wallet =
-      ("H4sIAAAAAAAAAIVSQW/TMBR+TShsDG1jUIREJ05oB6TkMIlLD6yCVuuWNtXS" +
-       "InEKrmslqTzHs83I\nJMQZfgkX7hwR4sYNjlzhwIV/wAHbSQdMlRopz9Z73/" +
-       "u+99l+9wvqUsB9OfPUGSfSxnwyI1hJTxIp\ny2x0EBE2Hel9jKH8ag7UAlg7" +
-       "1hiUEFNS0Ah4Ts8Smivf9vkm3SoE7Czlv8jtBFDHaUanCnYCOav4\n/un2z7" +
-       "v9srsVwGWOBGHqBF6Bq1Ub82kq7VKjfe/9OPj54a4DoDF3FmBCqxDj3w+a21" +
-       "/bP1Zd43SF\n5zJTWc4U3P5r87nKqD+sKq2C80IaddCrAH+p6x6bCMRwuuBk" +
-       "6xhppIIbwQydolJoH8m0j3irMBoO\n13Ja5bqpe6buVfX6lW8fP9169sUFpw" +
-       "tXaY6mXYRVLnqwqlJBZJrTacEf7lm1ay9WdNzUv6vJNvTI\nlio6CNCE0P9G" +
-       "cimaKNgqB6KIJX6kRMYS7VvB+jjqHMWDcBR3w/Hgsebylto/Iphkp2TJuzJm" +
-       "a+eW\nzbqm2ZsXLm5IESb72hkRMX77/fPLzuGb15brEkPHlmTDzNlUKZGZng" +
-       "MThkSW73ph1B/2Szl7eesK\nnPDQbrfmgiY05tXNYftpvzMYxb1B+9Go96Sz" +
-       "AFtwm7ypqvsxx+X1mCIJERa2/QfznlhUewMAAA==");
     
     public static void
       main(
@@ -287,11 +287,11 @@ public class User
                                                                                           s_uv.
                                                                                             receive();
                                                                                   }
-                                                                                  print(
-                                                                                    "PAYMENT STATUS: " +
-                                                                                    msg);
                                                                               }
                                                  }
+                                                 print(
+                                                   "PAYMENT STATUS: " +
+                                                   msg);
                                              }
                                          } else {
                                              {
@@ -379,7 +379,7 @@ public class User
       "2.2.3";
     final public static long
       jlc$SourceLastModified$jl =
-      1369250246000L;
+      1369290106000L;
     final public static String
       jlc$ClassType$jl =
       ("H4sIAAAAAAAAALVXW2xURRievXTLlq29QKEpvVGKgqS7IpEojcbSULrt1tYu" +

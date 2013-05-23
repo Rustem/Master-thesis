@@ -124,8 +124,8 @@ public class User
                             case FAILED: {
                                 msg = s_uv.receive();
                             }
-                            print("PAYMENT STATUS: " + msg);
                         }
+                        print("PAYMENT STATUS: " + msg);
                     }
                 } else {
                     s_uv.outbranch(WALLET) {

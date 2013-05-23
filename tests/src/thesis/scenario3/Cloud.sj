@@ -88,12 +88,12 @@ public class Cloud {
 
   private void set_backends_address() {
       System.out.println("Enter payment hostname and port. For ex.: localhost:8000");
-      String [] address = sc.nextLine().split(":");
+      String [] address = sc.next().split(":");
       this.payment_hostName = address[0];
       this.payment_port = Integer.parseInt(address[1]);
 
       System.out.println("Enter wallet hostname and port. For ex.: localhost:8001");
-      address = sc.nextLine().split(":");
+      address = sc.next().split(":");
       this.wallet_hostName = address[0];
       this.wallet_port = Integer.parseInt(address[1]);
   }
@@ -107,6 +107,7 @@ public class Cloud {
     String cur_user = null;
     try(user_vu) {
       user_vu = v3naS_vu.accept();
+      print("Session with user initiated.");
       boolean exit = false;
       int counter = 0, max_atempts = 5;
       user_vu.outwhile(!exit) {

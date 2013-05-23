@@ -6,14 +6,20 @@ import java.io.*;
 public class PaymentBackend {
 
     public static void main(String []argv) throws IOException{
-        // try {
-        //     new PaymentBackend(Integer.parseInt(argv[0]));
-        // } catch(Exception e) {
-
-        // }
+        try {
+            new PaymentBackend(Integer.parseInt(argv[0]));
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
         
     }
 
+    // private protocol p_payment {
+    //     !<Goods>.?{
+    //       VISA_MASTER: ?(CardDetails),
+    //       TRANSFER: ?(TransferDetails)
+    //     }
+    // }
     private protocol p_payment {
       !<Goods>.?{
           VISA_MASTER: ?(CardDetails),
@@ -40,7 +46,7 @@ public class PaymentBackend {
                 s_pv = ss_pv.accept();
                 username = s_pv.receive();
                 s_pu = (@p_payment) s_pv.receive();
-                <s_pu>.spawn(new PTThread(username));
+                <s_pu>.spawn(new PaymentTransactionThread(username));
                 // Need a session type parallel construct
                 
             } catch (SJIOException ioe) {
@@ -56,36 +62,46 @@ public class PaymentBackend {
         
     }
 
-    private class PTThread extends SJThread {
+    private class PaymentTransactionThread extends SJThread {
         private int PAYMENT_PAID = 1;
         private int PAYMENT_DECLINED = 2;
         private int PAYMENT_FAILED = 0;
 
         private String user;
-        public PTThread(String uname) {
+        public PaymentTransactionThread(String uname) {
             this.user = uname;
         }
 
-        public void run(@p_payment s_pu)
-                throws SJIOException, ClassNotFoundException, InterruptedException{
+        public void run(@p_payment s_pu) throws SJIOException, ClassNotFoundException {
             Goods userGoods = this.getActivePayments(this.user);
+            int status = -1;
+            Object obj = new Object();
             s_pu.send(userGoods);
-            int result = -1;
+            CardDetails cardDetails = null;
+            TransferDetails transferDetails = null;
             s_pu.inbranch() {
                 case VISA_MASTER: {
-                    CardDetails cd = (CardDetails) s_pu.receive();
-                    result = this.sendTransactionViaProcessing(userGoods, cd);
+                    cardDetails = (CardDetails) s_pu.receive();
                 }
                 case TRANSFER: {
-                    TransferDetails td = (TransferDetails) s_pu.receive();
-                    result = this.finishTransfer(userGoods, td);
+                    transferDetails = (TransferDetails) s_pu.receive();
                 }
             }
-            if(result == PAYMENT_PAID) {
+            int totalMoney = this._totalForGoods(userGoods);
+            if(cardDetails != null || transferDetails != null) {
+                if(totalMoney > 0) {
+                  status = PAYMENT_PAID;
+                } else if(totalMoney == 0) {
+                  status = PAYMENT_DECLINED;
+                } else {
+                  status = PAYMENT_FAILED;
+                }
+            }
+            if(status == PAYMENT_PAID) {
                 s_pu.outbranch(PAID) {
                     s_pu.send("PAYMENT SUCCEED. Congratulation");
                 }
-            } else if(result == PAYMENT_DECLINED) {
+            } else if(status == PAYMENT_DECLINED) {
                 s_pu.outbranch(DECLINED) {
                     s_pu.send(
                         "PAYMENT DECLINED. Payment object is already paid.");
@@ -98,19 +114,9 @@ public class PaymentBackend {
             }
 
         }
-        private int sendTransactionViaProcessing(Goods userGoods, CardDetails cd) {
-            int totalMoney = this._totalForGoods(userGoods);
-            if(totalMoney > 0) {
-              return PAYMENT_PAID;
-            } else if(totalMoney == 0) {
-              return PAYMENT_DECLINED;
-            } else {
-              return  PAYMENT_FAILED;
-            }
-        }
-        private int finishTransfer(Goods userGoods, TransferDetails td) {
-            return this.sendTransactionViaProcessing(userGoods, null);
-        }
+        // private int finishTransfer(Goods userGoods, TransferDetails td) {
+        //     return this.sendTransactionViaProcessing(userGoods, null);
+        // }
         private Goods getActivePayments(String user) {
             LinkedList lst = new LinkedList();
             lst.add(new Good("Saas1", 25000, 2));

@@ -6,8 +6,11 @@ import java.io.*;
 public class WalletBackend {
 
     public static void main(String []argv) {
-
-
+        try {
+            new WalletBackend(Integer.parseInt(argv[0]));
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private protocol p_wallet {
@@ -35,6 +38,7 @@ public class WalletBackend {
                 s_wv = ss_wv.accept();
                 username = s_wv.receive();
                 s_wu = (@p_wallet) s_wv.receive();
+                System.out.println("session accepted " + s_wu.toString());
                 // Need a session type parallel construct
                 <s_wu>.spawn(new WalletRechargeTransactionThread(username));
             } catch (SJIOException ioe) {
@@ -61,6 +65,8 @@ public class WalletBackend {
         public void run(@p_wallet session_wu) throws ClassNotFoundException, SJIOException{
             int txn_number = session_wu.receive();
             int walletNumber = session_wu.receive();
+            System.out.println(
+                "Accepted txn: " + txn_number + " and walletNum: " + walletNumber);
             int result = this.make_payment(txn_number, walletNumber);
             if(result == WALLET_USERNOTFOUND) {
                 session_wu.outbranch(USER_NOT_FOUND) {
