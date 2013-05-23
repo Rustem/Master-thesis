@@ -39,7 +39,7 @@ public class User
   }
 
   private static protocol wallet {
-      !<Integer>.!<Integer>.?{
+      ?(String).!<Integer>.!<Integer>.?{
           PAYMENT_INACTIVE: ?(OSMPMessage),
           USER_NOT_FOUND: ?(OSMPMessage),
           OK: ?(OSMPMessage)
@@ -50,7 +50,9 @@ public class User
         !<String>.!<String>
       ]*.?{
             ACCESS: !{ 
-                PAYMENT: @payment, WALLET:  @wallet },
+                PAYMENT: @payment,
+                WALLET:  @wallet
+            },
             DENY: ?(String)
           }
   }
@@ -129,8 +131,10 @@ public class User
                     }
                 } else {
                     s_uv.outbranch(WALLET) {
+                        System.out.println("Wallet transaction: " + s_uv.receive());
                         s_uv.send(new Integer(this.txn_number));
                         s_uv.send(new Integer(this.walletNumber));
+                        print("User sended data");
                         OSMPMessage msg = null;
                         s_uv.inbranch() {
                             case OK: {
@@ -142,8 +146,8 @@ public class User
                             case USER_NOT_FOUND: {
                                 msg = (OSMPMessage) s_uv.receive();
                             }
-                            print("WALLET RECHARGE STATUS: " + msg.comment);
                         }
+                        print("WALLET RECHARGE STATUS: " + msg.comment);
                     }
                 }      
             }

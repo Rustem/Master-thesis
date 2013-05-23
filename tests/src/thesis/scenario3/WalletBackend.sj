@@ -14,7 +14,7 @@ public class WalletBackend {
     }
 
     private protocol p_wallet {
-      ?(Integer).?(Integer).!{
+      !<String>.?(Integer).?(Integer).!{
           PAYMENT_INACTIVE: !<OSMPMessage>,
           USER_NOT_FOUND: !<OSMPMessage>,
           OK: !<OSMPMessage>
@@ -62,25 +62,30 @@ public class WalletBackend {
             this.user = username;
         }
 
-        public void run(@p_wallet session_wu) throws ClassNotFoundException, SJIOException{
-            int txn_number = session_wu.receive();
-            int walletNumber = session_wu.receive();
+        public void run(@p_wallet s_wu) throws ClassNotFoundException, SJIOException{
+            System.out.println("Thread invoked");
+            s_wu.send("Start");
+            Integer txn_number = (Integer) s_wu.receive();
+            System.out.println("received data");
+            Integer walletNumber = (Integer) s_wu.receive();
+            System.out.println("received data");
             System.out.println(
                 "Accepted txn: " + txn_number + " and walletNum: " + walletNumber);
-            int result = this.make_payment(txn_number, walletNumber);
+            int result = this.make_payment(
+                txn_number.intValue(), walletNumber.intValue());
             if(result == WALLET_USERNOTFOUND) {
-                session_wu.outbranch(USER_NOT_FOUND) {
-                    session_wu.send(new OSMPMessage(
+                s_wu.outbranch(USER_NOT_FOUND) {
+                    s_wu.send(new OSMPMessage(
                         WALLET_USERNOTFOUND, "User not found."));
                 }
             } else if(result == WALLET_PAYMENTINACTIVE) {
-                session_wu.outbranch(PAYMENT_INACTIVE) {
-                    session_wu.send(new OSMPMessage(
+                s_wu.outbranch(PAYMENT_INACTIVE) {
+                    s_wu.send(new OSMPMessage(
                         WALLET_PAYMENTINACTIVE, "Payment inactive."));
                 }
             } else {
-                session_wu.outbranch(OK) {
-                    session_wu.send(new OSMPMessage(
+                s_wu.outbranch(OK) {
+                    s_wu.send(new OSMPMessage(
                         WALLET_OK, "Wallet recharged."));
                 }
             }

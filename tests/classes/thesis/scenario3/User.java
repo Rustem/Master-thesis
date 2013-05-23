@@ -13,37 +13,18 @@ public class User
 {
     final private static java.lang.String
       _sjprotocol_wallet =
-      ("H4sIAAAAAAAAAIVSQW/TMBR+TShsDG1jUIREJ05oB6TkMIlLD6yCVuuWNtXS" +
-       "InEKrmslqTzHs83I\nJMQZfgkX7hwR4sYNjlzhwIV/wAHbSQdMlRopz9Z73/" +
-       "u+99l+9wvqUsB9OfPUGSfSxnwyI1hJTxIp\ny2x0EBE2Hel9jKH8ag7UAlg7" +
-       "1hiUEFNS0Ah4Ts8Smivf9vkm3SoE7Czlv8jtBFDHaUanCnYCOav4\n/un2z7" +
-       "v9srsVwGWOBGHqBF6Bq1Ub82kq7VKjfe/9OPj54a4DoDF3FmBCqxDj3w+a21" +
-       "/bP1Zd43SF\n5zJTWc4U3P5r87nKqD+sKq2C80IaddCrAH+p6x6bCMRwuuBk" +
-       "6xhppIIbwQydolJoH8m0j3irMBoO\n13Ja5bqpe6buVfX6lW8fP9169sUFpw" +
-       "tXaY6mXYRVLnqwqlJBZJrTacEf7lm1ay9WdNzUv6vJNvTI\nlio6CNCE0P9G" +
-       "cimaKNgqB6KIJX6kRMYS7VvB+jjqHMWDcBR3w/Hgsebylto/Iphkp2TJuzJm" +
-       "a+eW\nzbqm2ZsXLm5IESb72hkRMX77/fPLzuGb15brEkPHlmTDzNlUKZGZng" +
-       "MThkSW73ph1B/2Szl7eesK\nnPDQbrfmgiY05tXNYftpvzMYxb1B+9Go96Sz" +
-       "AFtwm7ypqvsxx+X1mCIJERa2/QfznlhUewMAAA==");
-    final private static java.lang.String
-      _sjprotocol_p_uv =
-      ("H4sIAAAAAAAAAI1Tv2/TQBS+JE2aNlV/qqWiRdABdaCykZBYMlCTONSt40Sx" +
-       "26qTudhH4si1je/a\nJhJihr+EhZ0RITY2GFlhYOE/YODubKdN6iqNknfxvf" +
-       "e+73s//PEvyOMQ7OCeQAYBwtz67R6yCBYw\nwji61fefo47jGfTBtED0yWQB" +
-       "6Idge2LqeFZWBXmr67g2Adsq7ok8TrySLQ6zxSi7rIJCAEPkkdfg\nLchS1t" +
-       "XAdwcd1ycxd8QhPfx0qP75fD9StpES0+AMpvXv6ea9H9LvmRzIqKAY+Nghju" +
-       "8RsK4mSeIZ\ncVyxGXvK/SDo00YJE6tVvAtaGxovmtJMtX17EBXAbIYDircA" +
-       "bIfQs7opiHkL0kgCVtQePIeR4j2I\nu3UYlBOOIKAsS8wvML8Q+/PTP798XX" +
-       "v5PQeyNTDr+tCuQYv4oQJmSDdEuOu7dj94tsvZ5i6K1C7S\nX5aCLVDJHErf" +
-       "V2EbuSOSci5sE7AcCXKh1xF1EjpehzaQgIJUqci6TjEeTyy7cUYm1M0KnB2W" +
-       "yc4S\nv5tLUc3u5wmYbkondVkzbjXJFrKQc542ydIpDYMd7iJg9XJnoqXlKz" +
-       "ucMTuX43OGzyNdZC4ROdWU\nlCp/uBPXtUH1bo5tc9OFFtqjU0KhaX349e2N" +
-       "fPD+XbRnHjxFLG2B9XyRj55NQogmkdAUq3JFVTR5\njIqZrSSmUJMUNTWif1" +
-       "MZw14XjZak6TW5RcU/mthsHXn2hE4z3PWRed/lXA8I/XYRdiiihTwYOv4T\n" +
-       "waC7g1+hsIoIdFyciCodKbpk1iXdoLrY3c441OY1qAoM7RiGs68koWvXQl/4" +
-       "vj3kKhxLqiobCc3I\neatFmD/U5ZapNQyz1jjURqdQvllvQ68361HbEqRs42" +
-       "A0m5ndxLsYvxWmokkVQzmSU2LjeVPCpcuF\nUjyCOijkTWFmrz/c4aqsnYzA" +
-       "lK6uzZV2BNy7xUyR/wv+A8TOuzeUBgAA");
+      ("H4sIAAAAAAAAAIVRv2/TQBj9YhNI+dUUlAqJABPqgGQPSCwZ2ggS1a0TR3WC" +
+       "xGQul5Pt6Ho+fEdx\nJcQMfwkLOyNCbGwwssLAwn/AwN3ZaWkVKZb8nXzf+9" +
+       "573/OHP1AXOThi7shjToSp2XROsBSOIEKU\nt+HeAcEkPSJj9RlhKJ+aBTUf" +
+       "rhwqGIpNS0LL5xk9jmkmXTPq6utOkcPWSonz3JYPdZykdCZhyxfz\niu+/af" +
+       "dk2i2nOz5c5CgnTL6AN2Ar1dbCTaVdanTvf5z4vz/dswAU5vYSTGAUIvz3Uf" +
+       "vO9+6vNVtv\n2uCZSGWaMQm3Ttd8KVPqjqpOp+C8UIE+WLltSNhsRZp6iVqh" +
+       "q6VI9dkw5O5Kco9Nc8RwskSgjpFC\nSrjpz9ERKt3vIpEMEO8stDhXKhu67+" +
+       "i+U/Xrl358/rL5/JsNVh8u0wzN+gjLLPdgTSY5EUlGZwXf\n3jFqV181VG2q" +
+       "11Zk68qyoQr3fDQl9Iwlm6KphBulIYpY7IYyT1mswpRwfRL2DqJhMI76wWT4" +
+       "xMQA\nyqI+rynm9rm/N6IIk13lhOQRfv/z6+ve/ru3RuYCQ4cm0w3N25YJEa" +
+       "mKDROG8jR76AThYDQo0zcq\nTQlWsH9WUJfNRbc56j4b9IbjyBt2H4+9p70l" +
+       "2IKby5as8tTrOR6TJCa5gd09ATRPAeX+/wD5m/qd\nnQMAAA==");
     final private static java.lang.String
       _sjprotocol_payment =
       ("H4sIAAAAAAAAAIWTz2/TMBSAX9N1a7ehlR+dkChiF7QDUoKEtEsPEK0ty8i2" +
@@ -59,6 +40,25 @@ public class User
        "rHnTmVGhrTmNWu7bhLI9JE\nL15a6N2Y8Qd9+9jrdvqy+DuF1+WR2C/4wxS3" +
        "NLswNa9r1zUBOyIgPJRETGLEQnrPHMjL588IaxOB\nwohPi9p44nj28Mj2Br" +
        "IutbYzj2ouoPYR83NM3rUM214Ie0ipz/8AUQ1rzFUEAAA=");
+    final private static java.lang.String
+      _sjprotocol_p_uv =
+      ("H4sIAAAAAAAAAI1TO2/TUBS+TZo0barSh1oqWgQdUAcqGwmJpUhgEoe6dZwo" +
+       "dos6mRv7kjhybeN7\n26YSYoZfwsLOiBAbG4ysMLDwDxi4DzttUldplJwb33" +
+       "PO933n4Y9/QQHHYAv3JHIWIcxt2O4hh2AJ\nI4zFrbn7DHW8wKIPtgPEZyIH" +
+       "QD8Gm2NTR7NyOig4Xc93CdjUcU/mcfKFbHmQLYvsbR0UIxijgLwG\nb0GOsi" +
+       "5HoX/W8UOScAsO5d6nff3P5ztC2VpGTIMz2M6/R+u3fyi/p/NgQgelKMQe8c" +
+       "KAgFU9TZKP\niefLzcSz3Y+iPm2UNLZaLTiltaHRoinNZDt0z0QBzE5wQPka" +
+       "gO0YBk43A7HgQBpJwJLegydQKN6B\nuFuH0XbKEUWUZYH5JeaXEn9h6ueXry" +
+       "svv+dBrgZm/BC6NeiQMNbANOnGCHdD3+1HT55yttnTErXz\n9JejYDeoZA5l" +
+       "7uqwjfwhSXkftglYFIJ8GHRkk8Re0KENJKCoVCqqaVKMB2PLbhyTMXWzAmcG" +
+       "ZbKz\nzO9mM1Sz+zkCpprKYV01rGtNsoUc5J1kTbJ8RMNgh7sIWD7fGbG0fG" +
+       "UHM2bnYnJO83lki8ynIieb\nilblDzeTutao3vWRbW760EE7dEootp0Pv769" +
+       "UffevxN7FsAjxNJusJ7P89GzSUhiEilNqapWdM1Q\nR6iY2UhjijVF0zMj+l" +
+       "eVMeh1yWophllTW1T8/bHNNlHgjuk0w10dmvctznWX0G8XYY8iOiiAsRc+\n" +
+       "lCy6O/gViquIQM/HqajygWYqdl0xLaqL3W2NQq1fgqrA2E1gOPtSGrpyKfR5" +
+       "GLoDruILRddVK21e\nSjd0Xmsh5vZNtWUbDcuuNfaN4Wk8vlp3w6w366J9KV" +
+       "KusTeczYySeueTt8PWDKViaQdqRmwyd0q4\ncL5YWkBQB8U8TOMtEjsy2Oiq" +
+       "ahwOgZUvLtGFpkTcu8FMif+L/gMmubfCogYAAA==");
     
     public static void
       main(
@@ -298,6 +298,13 @@ public class User
                                                  s_uv.
                                                    outlabel(
                                                    "WALLET");
+                                                 System.
+                                                   out.
+                                                   println(
+                                                   "Wallet transaction: " +
+                                                   (String)
+                                                     s_uv.
+                                                       receive());
                                                  s_uv.
                                                    send(
                                                    new Integer(
@@ -308,6 +315,8 @@ public class User
                                                    new Integer(
                                                      this.
                                                        walletNumber));
+                                                 print(
+                                                   "User sended data");
                                                  OSMPMessage msg =
                                                    null;
                                                  {
@@ -336,12 +345,12 @@ public class User
                                                                                         s_uv.
                                                                                           receive();
                                                                                 }
-                                                                                print(
-                                                                                  "WALLET RECHARGE STATUS: " +
-                                                                                  msg.
-                                                                                    comment);
                                                                             }
                                                  }
+                                                 print(
+                                                   "WALLET RECHARGE STATUS: " +
+                                                   msg.
+                                                     comment);
                                              }
                                          }
                                      } else {
@@ -379,49 +388,49 @@ public class User
       "2.2.3";
     final public static long
       jlc$SourceLastModified$jl =
-      1369290106000L;
+      1369295269000L;
     final public static String
       jlc$ClassType$jl =
-      ("H4sIAAAAAAAAALVXW2xURRievXTLlq29QKEpvVGKgqS7IpEojcbSULrt1tYu" +
-       "RSjBZfbs7PaUs+cc\nzpmzu0UlXqIoDyQG8JIIqDEhMTwYiPqgURPwronpA/" +
-       "gCicEYE4XIg5EYjP4z5+zt7OmiDzaZ6eyc\nf77/n//yzczpq6hG11C3qkhz" +
-       "KUmhQTqnEj04gTWdJAYlrOvbYCImbFp1M/vNwZEVHtQwjRpEOUox\nFYVBRa" +
-       "YkR6dRIE3ScaLpA4kESUyjJpmQRJRoIpbE/SCoyNOoWRdTMqaGRvRJoitShg" +
-       "k264ZKNK4z\nPxlBAUGRdaoZAlU0naLGyCzO4JBBRSkUEXXaH0G+pEikhL4P" +
-       "HUCuCKpJSjgFgssi+V2EOGJoiM2D\neJ0IZmpJLJD8Eu9eUU5Q1GVfUdhx7y" +
-       "gIwNLaNKEzSkGVV8YwgZpNkyQsp0JRqolyCkRrFAO0UNS2\nICgILVKxsBen" +
-       "SIyiVrvchPkJpPzcLWwJRS12MY6U01CbLWYl0Rr3Bf46NPFHt5vbnCCCxOyv" +
-       "gUWd\ntkWTJEk0IgvEXHjDCB4N7zTa3QiBcItN2JQZWP3+VOTnj7tMmRUOMu" +
-       "PxWSLQmHBzY3vH/MCPfg8z\nY5Gq6CJLhbKd86hOWF/6cyrk4rICIvsYzH/8" +
-       "ZPKznU++TX5xo0Vh5BMUyUjLYeQncmLQGtfCOCLK\nxJwdTyZ1QsPIK/Epn8" +
-       "J/gzuSokSYO7wwVjGd4eOcihCqheaC9joy/+pZR1HtlE60oD5LUQ8lOtVD\n" +
-       "uiaE6AzRRRgKRMaaqGwIWUI5BlefdblgJ+32qpIgBYcVKUG0mHDqylePbxl9" +
-       "4Xl3Ia8sQyDkJniw\nAB5k4Mjl4qjLy/3DHJ5gdfHrmf7Gw336e27kmUZ+MZ" +
-       "02KI5LBOoJS5KSJYkY5QnVVJK8PGcg4QJx\nyD1I45gEQDzXwSEZDfXYc6xY" +
-       "mWEYYUic+QN/f3ctlj3L0oGFbylDN02DYOw1bQusje4e2fN8j4cJ\nZb3Mzy" +
-       "Dae2v0mHDt0NjZC19fWlPMZYp6K0qsciUrEbv5E5oikARQUBH+5T+HfztSc9" +
-       "+7bpYPfmAe\niiFfoIw77TrKSqU/TzvMWe4IWpxUtDSW2Kc8V9TRGU3JFmd4" +
-       "Zizm49vAAX5o4A500kq2Sdaxj42s\nazLziPnTtgdOajee8d118cPFn7pL+a" +
-       "+hhCijhJrV1FQMxzaNEJi/9MrEkWNXD+7isbCCQZFPNeKS\nKOS4fS0uiP0S" +
-       "h8oOti49+tLa1y7mg72kiD6gaXiOxTr31HzHq5/j41D1UH26uJ/w4nJzTW6O" +
-       "3wys\nzleyJAyaDKpXktOEJqah9jMWOb3Y+dZPZ69MLnWXMPiqChItXWOyOH" +
-       "dlnZoDDSuraeDS59etPH1g\n8nLcZLfm8lrbIhvpe05+T9Y+GBAc6tYD50ze" +
-       "gay/k4/XMQdbOW9tvlWfDWqGTMU0CUZHwuNbcgJR\nGclxU7stDFaAdgoZYg" +
-       "dfPnvT8cd+P3eirtuMBlvTxvX4HXxZtjAm7P9o6sSNb+llvoti2jOMrlyl\n" +
-       "2u24pCLvvZBp8r1zMu1GtdOokR/WWKbbsWSw9JqG41YftCYjqL7se/nRaZ4T" +
-       "/YWybrcHs0StveCK\nnocxk2bjWrPG1JzLpbLRZi7dw/vVZqp7KOCIMgZ1ta" +
-       "omZjAFo3w6v87k2ByeSxOZ5iPVUhYp4A+q\nwNFj1ibrHyjoGnXQxcZbWDfE" +
-       "uq2A78sCGRNOsWEnlPF/heJVY0bGjlFgljpoy6ENWcwyZGMWF+Kq\nopWqeN" +
-       "YOgYIaSUmJMvvVt5CGNmhbLQ1bnTXsYN0UZZceXc8qWqIq4HpowxbgsDPgLg" +
-       "uwTsBa4iGD\nXTmrQnZDC1uQYWfIRy3IgBmYIuj6hUC7oI1YoCPOoDhvJ83J" +
-       "Mbk6JBQvuh/aqAU56gyZqIwWgkC5\ndSGfqiVMHxWwbFVzPS+JXotRiqzUZk" +
-       "EAVXQsdJHkhHhwx/XAc/j8bkYybOEGivxUUfskkiFSkajs\nIGP83pyv3oZH" +
-       "un4Y2njqCTtTeUF9V9WVMaEps+Jhz4z4BdxrCkxRcXEvX9Rfzg91GoF3h7yt" +
-       "jCU6\nCxFohLYGWoMVgQbHk7jC/W42vsMsyaqkX3lV52eleaid8fRed3+wrJ" +
-       "ffP7xxrJsm2t84lU+YspcJ\nt9Ff2FGblfvVdtSnqqqz3chKDfY7A2SThqOB" +
-       "fwxZC+6GyYwimrppWXHcDm2TpXWTkx95ZVRVe0ub\nnoWnXtwQJbj4Q5YL7N" +
-       "ycJPsMdjW3SqG+WApjWHUwsxPaZsvMzf/NTFeRKftubeth4FI4ZmTO+E87\n" +
-       "WNIBbcyyZOx/ctgx8EiK0JgCj0r+GudkxM4R9q5g97jWive/+UoVeub3rDmn" +
-       "Nn1ppmf+JemD51zS\nkKTSM7hk7FM1khS5al/+RGb/TsC1z/60ATYpjLnxx0" +
-       "3ZN+CsNGXZrzdVh3ujeX3I/QPZj7n5wxAA\nAA==");
+      ("H4sIAAAAAAAAALVXW2xURRievXTLlq29QKEpvVGKgqS7IpGoRWOF1m67tbUX" +
+       "hBJcZs/Obk85e87x\nnDm7W1TiJQryQGIAL4lAVBISw4OBqA8aNQHvmpg+gC" +
+       "+QGIwxUYg8GInB6D9zzt7Oni76YJOZzs75\n5/v/+S/fzJy6gqp0DXWqijSX" +
+       "lBQapHMq0YNjWNNJfLOEdX0SJqLCvatuZL7ZN7TCg+qmUZ0oT1BM\nRWGzIl" +
+       "OSpdMokCKpGNH0vnicxKdRg0xIfIJoIpbEPSCoyNOoUReTMqaGRvRxoitSmg" +
+       "k26oZKNK4z\nNxlBAUGRdaoZAlU0naL6yCxO45BBRSkUEXXaG0G+hEikuP44" +
+       "2otcEVSVkHASBJdFcrsIccTQAJsH\n8RoRzNQSWCC5Jd7dohynqMO+Ir/j7m" +
+       "EQgKXVKUJnlLwqr4xhAjWaJklYToYmqCbKSRCtUgzQQlHL\ngqAgtEjFwm6c" +
+       "JFGKmu1yY+YnkPJzt7AlFDXZxThSVkMttpgVRWvUF/jrwNgfnW5uc5wIErO/" +
+       "Cha1\n2xaNkwTRiCwQc+F1I3g4vN1odSMEwk02YVOmb/X7U5GfP+4wZVY4yI" +
+       "zGZolAo8KNja1t830/+j3M\njEWqoossFUp2zqM6Zn3pzaqQi8vyiOxjMPfx" +
+       "k/HPtj/9NvnFjRaFkU9QJCMlh5GfyPHN1rgaxhFR\nJubsaCKhExpGXolP+R" +
+       "T+G9yRECXC3OGFsYrpDB9nVYRQNTQXtBPI/KtlHUXVUzrRgvosRV2U6FQP\n" +
+       "6ZoQojNEF2EoEBlrorIhZAllGVxtxuWCnbTaq0qCFBxUpDjRosLJy1892T/8" +
+       "4n53Pq8sQyDkJngw\nDx5k4Mjl4qjLS/3DHB5ndfHr6d76gz36e27kmUZ+MZ" +
+       "UyKI5JBOoJS5KSIfEo5QnVUJS8PGcg4QIx\nyD1I46gEQDzXwSFpDXXZc6xQ" +
+       "mWEYYUic+b1/f3c1mjnD0oGFbylDN02DYOw2bQusndg5tGt/l4cJ\nZbzMzy" +
+       "DafXP0qHD1wMiZ819fXFPIZYq6y0qsfCUrEbv5Y5oikDhQUAH+lT8HfztUdc" +
+       "+7bpYPfmAe\niiFfoIzb7TpKSqU3RzvMWe4IWpxQtBSW2KccV9TQGU3JFGZ4" +
+       "Zizm41vAAX5o4A70lpVsk6xjH+tZ\n12DmEfOnbQ+c1K4/57vjwoeLP3UX81" +
+       "9dEVFOEGpWU0MhHJMaITB/8dWxQ0eu7NvBY2EFgyKfasQk\nUchy+5pcEPsl" +
+       "DpUdbF56+OW1r1/IBXtJAb1P0/Aci3X2mfm21z7HR6Hqofp0cQ/hxeXmmtwc" +
+       "vxFY\nna9kSRg0GVQvJ6cxTUxB7actcnqp/cRPZy6PL3UXMfiqMhItXmOyOH" +
+       "dljZoFDSsraeDS59atPLV3\n/FLMZLfG0lrrl43UXce/J2sfCAgOdeuBcybn" +
+       "QNbfzsfrmIOtnLc236zPBjVDpmKKBCeGwqP9WYGo\njOS4qZ0WBitAO4UMsI" +
+       "Mvl72p2BO/nz1W02lGg61p4Xr8Dr4sWRgV9nw0dez6t/QS30Uh7RlGR7Zc\n" +
+       "7VZcVJF3n083+N45nnKj6mlUzw9rLNOtWDJYek3DcatvtiYjqLbke+nRaZ4T" +
+       "vfmybrUHs0itveAK\nnocxk2bjarPG1KzLpbLRg1y6i/erzVT3UMARZQzqql" +
+       "VNTGMKRvl0fp3Jsjk8lyIyzUWqqSRSwB9U\ngaPHrE3W35/XNeygi437WTfA" +
+       "uocA35cBMiacYsNOKKP/CsWrRo20HSPPLDXQlkMbtJhl0MYsLsRV\nTZSr4l" +
+       "k7AAqqJCUpyuxXz0IaWqCFLQ1hZw3bWDdF2aVH1zOKFq8IuB7akAU45Ay4ww" +
+       "KsEbAWf9hg\nV86KkJ3Qhi3IYWfIxyzIgBmYAuj6hUA7oEUs0IgzKM7ZSbNy" +
+       "VK4MCcWL7oM2YkGOOEPGy6OFIFBu\nXcilahHTTwhYtqq5lpdEt8UoBVZqsS" +
+       "CAKtoWukhyQty37VrgBXxuJyMZtnADRX6qqD0SSROpQFR2\nkBF+b85Vb92j" +
+       "HT8MbDz5lJ2pvKC+o+LKqNCQXvGIZ0b8Au41eaYou7iXLuot5YcajcC7Q54s" +
+       "YYn2\nfATqoa2BVmdFoM7xJC5zv5uNbzNLsiLpl1/V+VlpHmqnPd3X3B8s6+" +
+       "b3D28M66aJ9jdO+ROm5GXC\nbfTnd9Ri5X6lHfWoqupsN7JSg/1OA9mk4Gjg" +
+       "H0PWgjthMq2Ipm5aUhy3Qttkad3k5EdeGRXV3tSm\n5+GpFzNECS7+kOUCOz" +
+       "fHyeMGu5pbpVBbKIURrDqY2Q5ti2Xmlv9mpqvAlD03t/UgcCkcMzJn/Gcd\n" +
+       "LGmDNmpZMvo/OewIeCRJaFSBRyV/jXMyYucIe1ewe1xz2fvffKUKXfO71pxV" +
+       "G7400zP3kvTBcy5h\nSFLxGVw09qkaSYhctS93IrN/x+DaZ3/aAJvkx9z4o6" +
+       "bsG3BWmrLs15uqw73RvD5k/wEhFC2wwxAA\nAA==");
 }

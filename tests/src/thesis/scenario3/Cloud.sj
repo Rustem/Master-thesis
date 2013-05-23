@@ -41,7 +41,7 @@ public class Cloud {
   }
 
   private protocol p_wallet {
-      ?(Integer).?(Integer).!{
+      !<String>.?(Integer).?(Integer).!{
           PAYMENT_INACTIVE: !<OSMPMessage>,
           USER_NOT_FOUND: !<OSMPMessage>,
           OK: !<OSMPMessage>
@@ -61,7 +61,9 @@ public class Cloud {
     ![
       ?(String).?(String)     // login password
     ]*.!{
-        ACCESS: ?{ PAYMENT: @p_payment, WALLET: @p_wallet},
+        ACCESS: ?{
+          PAYMENT: @p_payment,
+          WALLET: @p_wallet},
         DENY: !<String>
       }
       
