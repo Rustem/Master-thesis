@@ -1,0 +1,22 @@
+% Hello, this is a template document for your thesis
+% Vadim K.
+
+% Basic formatting (font size and spacing, paper margins)
+\documentclass[14pt]{extreport}
+\usepackage[a4paper, inner=3cm, outer=1cm, top=2cm, bottom=2cm, bindingoffset=0cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+
+\include{Config}
+
+\begin{document}
+
+    % Table of contents,
+    % LaTeX counts pages without the cover and abstract, 
+    % so you should manually set the page, where TOC starts
+    \setcounter{page}{4}
+
+    % Appendix
+    \appendix
+    \include{8.Appendix}
+
+\end{document}
