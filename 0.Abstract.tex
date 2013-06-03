@@ -1,0 +1,36 @@
+\begin{abstract}
+The Master dissertation contains \pageref{LastPage} pages, 8 tables, 17 figures, list of sources -- 25.
+
+\textit{Session-Java (SJ), Web Services Choreography Description Language (WS-CDL), End-Point Projection (EPP), Java Remote Method Invocation (Java RMI), Common Object Request Broker Architecture (CORBA), Web Services Description Language, Web service (WS)}
+
+The object of the research of the Master dissertation is to study the main issues behind the complex communication behaviours in a Web environment, introduce the limitation of the existing solutions such as Java RMI, and their XML variants \cite{soaatoi}, defining the formal theory that challenge these issues and confirming it, making analyses in the context of the presented theory.
+
+The main goal of the dissertation is to be ensured that every concrete process (web service) is correctly functioning and correctly interacting in specified communication behaviour.
+
+To accomplish the defined goal, it was presented the formal theory that describes communication behaviour, using session and session types, in two different ways and analyses their relationship. The first one is the global calculus, an extended form of Choreography Description Language (CDL) \cite{wscdlprimer}, a web service description language developed by W3C's WS-CDL Working Group. And the second is the local calculus, originated from the $\pi$-calculus \cite{comseqpro}, one of the representative calculi for communicating processes. This formal theory is an attempt to enhance the quality of software, as it represents ``formal blueprints'' of how communicating participants should behave and offer a concise view of the message flows.
+
+For checking and evaluation this theory, the Master project attempts to confirm the suitability of the presented theory for business transaction, by introducing real-life business scenarios developed on Session-Java (SJ) \cite{sessionbdpinjava}, an extension to Java implementing Session-Based programming. Each scenario aim to test multiple features of the language and enable us to identify the advantages and disadvantages. The thesis explores the robustness of the language and the scalability as scenarios vary in size but also complexity. In addition we will be targeting for things such as ease of programming in SJ, clarity of code, any limitations, bugs or non-implementable scenarios.
+	
+\end{abstract}
+
+\begin{otherlanguage}{russian}
+\begin{abstract}
+Магистерская диссертация состоит из \pageref{LastPage} страниц, 8 таблиц, 17 иллюстраций, использовано 25 источника.
+
+\textit{Session-Java (SJ), Web Services Choreography Description Language (WS-CDL), End-Point Projection (EPP), Java Remote Method Invocation (Java RMI), Common Object Request Broker Architecture (CORBA), Web Services Description Language, Web service (WS)}
+
+Объектом исследования магистерской диссертации является изучение открытых проблем взаимодействия бизнес процессов в Web-среде; демонстрация ограниченности и ``неуклюжести'' существующих технологических решений (Java RMI, CORBA \cite{soaatoi}); введение новой формальной теории для решения изученных проблем, а также разработка и качественная и количественная оценка бизнес протоколов для подтверждения введенной теории.
+
+Основная цель диссертации -- гарантировать, что каждый конкретный процесс функционирует и взаимодействует согласно описанной спецификации (соглашению).
+
+Для достижения поставленной цели в диссертации представлена теория, описывающая бизнес процессы и их взаимодействие, используя понятия ``сессия'' и ``типизация сессии''. Формальная теория описывает поведение бизнес процесса двумя способами:
+
+\begin{enumerate}
+\item  общий анализ основан на теории ``Choreography Description Language'' \cite{wscdlprimer};
+
+\item  частный анализ основан на теории процессов ``$\pi$-calculus'' \cite{comseqpro}.
+\end{enumerate}
+
+Для того чтобы понять, насколько представленная теория пригодна при дизайне спецификации и реализации бизнес процессов, я реализовал бизнес процессы, описанные в Главе 4 магистерской работы на языке ``Session-Java'' \cite{sessionbdpinjava}. Цель каждого реализованного бизнес процесса - исследовать надежность и масштабируемость теории. И, наконец, в Главе 5 приведены результаты сравнения ``Session-Java'' с существующими технологическими решениями.
+\end{abstract}
+\end{otherlanguage}

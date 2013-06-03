@@ -1,0 +1,121 @@
+\begin{thebibliography}{10}
+
+\bibitem{soaatoi}
+Matjaz~B. Juric, Ramesh Loganathan, Poornachandra Sarang, and Frank Jennings.
+\newblock {\em SOA Approach to Integration}.
+\newblock PACKT, Birmingham --- Mumbai, 2007.
+
+\bibitem{wscdlprimer}
+Steve Ross-Talbot and Tony Fletcher.
+\newblock Ws-cdl primer.
+\newblock {\em W3C}, 2006.
+
+\bibitem{comseqpro}
+C.~Hoare.
+\newblock {\em Communicating Sequential Processes}.
+\newblock Prentice Holl, 1985.
+
+\bibitem{sessionbdpinjava}
+H.~Raymond, Y.~Nobuko, and H.~Kohei.
+\newblock Session-based distibuted programming in java.
+\newblock {\em Proceedings of the 22nd European conference on Object-Oriented
+  Programming}, pages 516--541, 2008.
+
+\bibitem{rabbitmq}
+Rabbitmq, \url{http://rabbitmq.com}.
+
+\bibitem{zeromq}
+Zeromq, \url{zeromq.org}.
+
+\bibitem{soap}
+Soap: Messaging framework, \url{http://w3.org/TR/soap12-part1/}, 2007.
+
+\bibitem{wsdlspec}
+Wsdl specification, \url{http://w3.org/TR/wsdl}.
+
+\bibitem{rest}
+Rest (representational state transfer),
+  \url{http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm}.
+
+\bibitem{osw}
+A.~Hoing.
+\newblock Orchestrating secure workflows.
+\newblock {\em PhD Dissertation}, 2010.
+
+\bibitem{critical-ws-cdl}
+B.~Alistair, D.~Marlon, and O.~Phillipa.
+\newblock A critical overview of the web service choreography description
+  language (ws-cdl).
+\newblock {\em BPTrends}, 2005.
+
+\bibitem{essence-choreography}
+Z.~Qiu, C.~Cai, X.~Zhao, and H.~Yang.
+\newblock Exploring the essence of choreography.
+\newblock {\em Proceedings of the 16th international conference on World Wide
+  Web}, pages 973--982, 2007.
+
+\bibitem{structured-com-centered-prog}
+M.~Carbone, H.~Kohei, and Y.~Nobuko.
+\newblock Structured communication-centered programming for web services.
+\newblock {\em ACM Transactions on Programming Languages and Systems}, 34,
+  2012.
+
+\bibitem{com-seq-proc}
+A.~Abdallah, C.~Jones, and J.~Sanders.
+\newblock {\em Communication Sequential Processes: The first 25 years}.
+
+\bibitem{com-centered-basis}
+M.~Carbone.
+\newblock A theoretical basis of communication-centered concurrent programming.
+\newblock {\em ACM New York}, 2012.
+
+\bibitem{lang-primitives}
+K.~Honda and V.~T. Vasconcelos.
+\newblock Language primitives and type discipline for structured.
+\newblock {\em ESOP'98}, pages 122--138, 1998.
+
+\bibitem{pcalc-control}
+K.~Honda and V.~T. Vasconcelos.
+\newblock Control in the p-calculus.
+\newblock {\em ACM-SIGPLAN Continuation}, 2004.
+
+\bibitem{types-and-langs}
+B.~C. Pierce.
+\newblock {\em Types and Programming Languages}.
+\newblock MIT Press, 2002.
+
+\bibitem{typing-and-subtyping}
+B.~C. Pierce and D.~Sangiorgi.
+\newblock Typing and subtyping for mobile processes.
+\newblock {\em Mathematical Structures in Computer Science}, pages 409--453,
+  1996.
+
+\bibitem{poly-p-calc}
+R.~Milner.
+\newblock {\em The polyadic p-calculus}.
+\newblock Springer-Verlag, 1993.
+
+\bibitem{sj-framework}
+H.~Raymond, Y.~Nobuko, B.~Andi, and H.~Kohei.
+\newblock The sj framework for transport-independent, type-safe,
+  object-oriented communications programming.
+\newblock {\em CiteSteer}.
+
+\bibitem{thesis}
+Rustem Kamun.
+\newblock Master-thesis, \url{https://github.com/Rustem/Master-thesis}.
+
+\bibitem{v3na}
+Rustem Kamun.
+\newblock E-commerce cloud \url{http://v3na.com}, 2013.
+
+\bibitem{dccp}
+E.~Kohler and S.~Floyd.
+\newblock Designing dccp: congestion control without reliability.
+\newblock {\em SIGCOMM Comput. Commun}, pages 27--38, 2006.
+
+\bibitem{amqp}
+Advanced message queueing protocols (amqp),
+  \url{http://jira.amqp.org/confluence/display/AMQP/Advanced+Message+Queuing+Protocol}.
+
+\end{thebibliography}

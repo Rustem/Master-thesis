@@ -1,0 +1,27 @@
+\select@language {english}
+\select@language {russian}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Compilation and runtime stages of the Framework\relax }}{16}{figure.caption.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Message-oriented middleware\relax }}{21}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Remote Procedure Calls\relax }}{22}{figure.caption.8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Basic ORB architecture\relax }}{24}{figure.caption.9}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces SOA components\relax }}{28}{figure.caption.10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces WS Standards\relax }}{31}{figure.caption.11}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Simple BSH protocol\relax }}{33}{figure.caption.12}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Example of behavioural interface\relax }}{34}{figure.caption.13}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Example of an orchestration in the form of an UML activity diagram\relax }}{35}{figure.caption.14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Simple BSH protocol\relax }}{42}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Session delegation\relax }}{59}{figure.caption.16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces V3na protocol for SaaS connection\relax }}{65}{figure.caption.17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Overview of interactions for Scenario \# 1\relax }}{67}{figure.caption.18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Session delegation in Scenario \# 2\relax }}{70}{figure.caption.19}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Sequence diagram of interactions for Scenario \# 2\relax }}{71}{figure.caption.20}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Choreography for Scenario \# 3\relax }}{74}{figure.caption.21}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Benchmarking\relax }}{78}{figure.caption.22}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

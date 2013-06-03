@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: article.aux
+A level-1 auxiliary file: 0.Abstract.aux
+A level-1 auxiliary file: 1.Introduction.aux
+A level-1 auxiliary file: 2.Fundamentals.aux
+A level-1 auxiliary file: 3.Formal.aux
+A level-1 auxiliary file: 4.Session.aux
+A level-1 auxiliary file: 5.Evaluation.aux
+A level-1 auxiliary file: 6.Conclusion.aux
+A level-1 auxiliary file: 7.Appendix.aux
+The style file: unsrt.bst
+A level-1 auxiliary file: 8.Additional.aux
+Database file #1: ../Bibliography.bib
+Warning--empty publisher in com-seq-proc
+Warning--empty year in com-seq-proc
+Warning--empty year in sj-framework
+You've used 25 entries,
+            1791 wiz_defined-function locations,
+            554 strings with 6152 characters,
+and the built_in function-call counts, 4250 in all, are:
+= -- 347
+> -- 160
+< -- 5
++ -- 66
+- -- 41
+* -- 162
+:= -- 619
+add.period$ -- 60
+call.type$ -- 25
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 28
+duplicate$ -- 234
+empty$ -- 480
+format.name$ -- 41
+if$ -- 1012
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 22
+newline$ -- 113
+num.names$ -- 19
+pop$ -- 122
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 164
+stack$ -- 0
+substring$ -- 132
+swap$ -- 68
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 29
+width$ -- 27
+write$ -- 220
+(There were 3 warnings)

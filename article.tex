@@ -10,13 +10,32 @@
 
 \begin{document}
 
+    \input{title.tex}
+
+    \include{0.Abstract}
+
     % Table of contents,
     % LaTeX counts pages without the cover and abstract, 
     % so you should manually set the page, where TOC starts
-    \setcounter{page}{4}
+    \setcounter{page}{6}
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    
+    \include{1.Introduction}
+    \include{2.Fundamentals}
+    \include{3.Formal}
+    \include{4.Session}
+    \include{5.Evaluation}
+    \include{6.Conclusion}
 
     % Appendix
     \appendix
-    \include{8.Appendix}
+    \include{7.Appendix}
+    
+    \bibliographystyle{unsrt}
+    \bibliography{Bibliography}
+    
+    \include{8.Additional}
 
 \end{document}
